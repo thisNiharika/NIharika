@@ -1,0 +1,51 @@
+<html>
+  <head>
+ <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <style>
+      .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      
+      .fa {
+        font-family: "Font Awesome 5 Free";
+        font-size: 16px;
+        padding: 5px;
+        cursor: pointer;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button" onclick="changeIcon()">
+      <i class="fa fa-bars"></i>
+    </button>
+    <button class="button" id="myBtn">
+      <i class="fa fa-times"></i>
+    </button>
+    
+    <script>
+      function changeIcon() {
+        var myBtn = document.getElementById("myBtn");
+        var currentIcon = myBtn.querySelector(".fa");
+        if (currentIcon.classList.contains("fa-bars")) {
+          currentIcon.classList.remove("fa-bars");
+          currentIcon.classList.add("fa-times");
+        } else {
+          currentIcon.classList.remove("fa-times");
+          currentIcon.classList.add("fa-bars");
+        }
+      }
+    </script>
+  </body>
+</html>
